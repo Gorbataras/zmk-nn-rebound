@@ -34,7 +34,7 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (rebound_v4)
-        run: west build --pristine -s zmk/app -b nrfmicro_1.3 -- -DSHIELD=rebound_v4 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build --pristine -s zmk/app -b nrfmicro_13 -- -DSHIELD=rebound_v4 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: rebound_v4 DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nrfmicro_13.dts.pre.tmp

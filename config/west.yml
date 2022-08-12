@@ -2,10 +2,12 @@ manifest:
   remotes:
     - name: Gorbataras
       url-base: https://github.com/Gorbataras
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
-      remote: Gorbataras
-      revision: default_rebound
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
